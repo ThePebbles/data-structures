@@ -1,3 +1,4 @@
+
 window.variant = document.location.search.slice(1);
 
 define([
