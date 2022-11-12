@@ -3,7 +3,7 @@ var Stack = function() {
   // but try not not reference your old code in writing the new style.
   var stack = Object.create(stackMethods);
   stack.storage = {};
-  stack.i = 0
+  stack.i = 0;
   return stack;
 };
 
@@ -16,7 +16,7 @@ var stackMethods = {
   pop() {
     this.i--;
     if (this.i < 0) {
-      this.i = 0
+      this.i = 0;
     }
     return this.storage[this.i];
   },
