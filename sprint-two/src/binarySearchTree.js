@@ -10,6 +10,9 @@ var binaryTreeMethods = {};
 
 
 binaryTreeMethods.insert = function(value) {
+  if (typeof value !== 'number') {
+    return undefined;
+  }
   if (value < this.value) {
     if (!this.left) {
       this.left = new BinarySearchTree(value);

@@ -37,4 +37,11 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+
+  it('should return undefined for values that are not numbers', function() {
+    expect(binarySearchTree.insert([5])).to.equal(undefined);
+    expect(binarySearchTree.insert('Hello')).to.equal(undefined);
+    expect(binarySearchTree.insert({3: 'try'})).to.equal(undefined);
+    expect(binarySearchTree.insert(false)).to.equal(undefined);
+  });
 });

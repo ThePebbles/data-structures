@@ -73,4 +73,10 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+
+  it('should return undefined for key inputs that are not strings or numbers', function() {
+    expect(hashTable.insert(['hello'], 'Stevenson')).to.equal(undefined);
+    expect(hashTable.insert(false, 'Johnson')).to.equal(undefined);
+    expect(hashTable.insert({3: 'hello'}, 'Johnson')).to.equal(undefined);
+  })
 });

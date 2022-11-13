@@ -42,4 +42,10 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  it('should handle non-numerical values', function() {
+    tree.addChild('Hello');
+    tree.addChild(true);
+    expect(tree.contains('Hello')).to.equal(true);
+    expect(tree.contains(true)).to.equal(true);
+  });
 });

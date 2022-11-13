@@ -7,6 +7,9 @@ var HashTable = function() {
 };
 
 HashTable.prototype.insert = function(k, v) {
+  if (typeof k !== 'number' && typeof k !== 'string') {
+    return undefined;
+  }
   var index = getIndexBelowMaxForKey(k, this._limit);
   var array = [];
   if (!this['_storage'].get(index)) {

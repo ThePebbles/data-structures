@@ -24,4 +24,10 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('should return undefined if input is not string', function() {
+    expect(set.add(5)).to.equal(undefined);
+    expect(set.add(['hello'])).to.equal(undefined);
+    expect(set.add(true)).to.equal(undefined);
+    expect(set.add({3: 'world'})).to.equal(undefined);
+  });
 });

@@ -51,5 +51,9 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should handle strings', function () {
+    linkedList.addToTail('destination');
+    expect(linkedList.tail.value).to.equal('destination');
+  });
   // add more tests here to test the functionality of linkedList
 });

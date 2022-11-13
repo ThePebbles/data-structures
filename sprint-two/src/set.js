@@ -7,6 +7,9 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
+  if (typeof item !== 'string') {
+    return undefined;
+  }
   if (this['_storage'][item] === undefined) {
     this['_storage'][item] = 1;
   } else {

@@ -68,4 +68,11 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  it('should return undefined for values that are not numbers', function () {
+    expect(graph.addNode('Hello')).to.equal(undefined);
+    expect(graph.addNode(true)).to.equal(undefined);
+    expect(graph.addNode([3])).to.equal(undefined);
+    expect(graph.addNode({16: false})).to.equal(undefined);
+  });
 });
